@@ -9,16 +9,16 @@ const Form = () => {
     const {tg} = useTelegram()
 
     useEffect(() => {
-        tg.BottomButton.setParams({
+        tg.MainButton.setParams({
             text: 'Отправить данные'
         })
     }, []);
 
     useEffect(() => {
         if (!street || !country) {
-            tg.BottomButton.hide();
+            tg.MainButton.hide();
         } else {
-            tg.BottomButton.show();
+            tg.MainButton.show();
         }
     }, [country, street]);
 
