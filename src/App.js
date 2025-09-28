@@ -2,7 +2,7 @@ import './App.css';
 import {useEffect} from "react";
 import {useTelegram} from "./hooks/useTelegram";
 import Header from "./components/Header/Header";
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import { BrowserRouter as Route, Routes} from 'react-router-dom'
 import ProductList from "./components/ProductList/ProductList";
 import Form from "./components/Form/Form";
 
@@ -16,12 +16,10 @@ function App() {
   return (
     <div className="App">
         <Header />
-        <Router>
-            <Routes>
-                <Route path={"/form"} element={<Form />} />
-                <Route index element={<ProductList />} />
-            </Routes>
-        </Router>
+        <Routes>
+            <Route path={"/form"} element={<Form />} />
+            <Route index element={<ProductList />} />
+        </Routes>
     </div>
   );
 }
