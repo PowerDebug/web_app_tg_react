@@ -8,11 +8,11 @@ const Form = () => {
     const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram()
 
-    // useEffect(() => {
-    //     tg.MainButton.setParams({
-    //         text: 'Отправить данные'
-    //     })
-    // }, []);
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: 'Отправить данные'
+        })
+    }, []);
 
     useEffect(() => {
         if (!street || !country) {
